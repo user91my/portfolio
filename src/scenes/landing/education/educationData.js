@@ -4,7 +4,7 @@ export const educationData = [
   {
     logo: (
       <img
-        src={`${baseURL}/assets/logos/fcc.JPG`}
+        src={`${baseURL}/assets/logos/fcc.jpg`}
         alt="fcc"
         width="80px"
         height="70px"
