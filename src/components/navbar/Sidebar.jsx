@@ -56,7 +56,7 @@ const Sidebar = ({
             sx={{
               willChange: "opacity, backdropFilter",
               background: `${hexToRgba(palette.primary[500], 0.5)}`,
-              transition: "opacity 0.5s",
+              transition: "opacity 0.5s ease",
               "&.sidebarOpening": { opacity: 0 },
               "&.sidebarOpened": { backdropFilter: "blur(5px)" },
               "&.sidebarClosing": { opacity: 0 },
@@ -95,7 +95,7 @@ const Sidebar = ({
                 palette.primary[100],
                 1
               )}`,
-              transition: "transform 0.5s",
+              transition: "transform 0.5s ease",
               "&.sidebarOpening": { transform: "translate(-350px)" },
               "&.sidebarClosing": { transform: "translate(-350px)" },
               "&.sidebarClosed": { display: "none" },
