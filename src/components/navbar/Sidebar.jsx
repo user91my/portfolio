@@ -54,10 +54,11 @@ const Sidebar = ({
             height="100%"
             zIndex="-1"
             sx={{
+              willChange: "opacity",
               background: `${hexToRgba(palette.primary[500], 0.5)}`,
-              transition: "opacity 0.5s",
+              transition: "opacity 0.5s ease",
               "&.sidebarOpening": { opacity: 0 },
-              "&.sidebarOpened": { backdropFilter: "blur(5px)" },
+              //"&.sidebarOpened": { backdropFilter: "blur(5px)" }, // disabled backdropFilter as it causes mobile browsers to lag when opening sidebar
               "&.sidebarClosing": { opacity: 0 },
               "&.sidebarClosed": { display: "none" },
             }}
@@ -77,6 +78,8 @@ const Sidebar = ({
             width={isMinWidth700px && isMinHeight850px ? "350px" : "250px"}
             height="100%"
             sx={{
+              willChange: "transform",
+              overflow: "auto",
               background: `linear-gradient(
                 180deg, 
                 ${hexToRgba(palette.primary[600], "0.7")},
@@ -93,7 +96,7 @@ const Sidebar = ({
                 palette.primary[100],
                 1
               )}`,
-              transition: "transform 0.5s",
+              transition: "transform 0.5s ease",
               "&.sidebarOpening": { transform: "translate(-350px)" },
               "&.sidebarClosing": { transform: "translate(-350px)" },
               "&.sidebarClosed": { display: "none" },
@@ -130,16 +133,17 @@ const Sidebar = ({
                     alignItems="center"
                     height="75px"
                     sx={{
+                      willChange: "transform",
                       "&:hover": {
                         transition: "0.5s ease",
                         transform: "scale(1.1)",
                         cursor: "pointer",
                         color: palette.primary[200],
                         background: `linear-gradient(
-                    180deg,
-                    ${hexToRgba(palette.primary[600], "0.5")},
-                    ${hexToRgba(palette.primary[100], "0.3")}
-                  )`,
+                          180deg,
+                          ${hexToRgba(palette.primary[600], "0.5")},
+                          ${hexToRgba(palette.primary[100], "0.3")}
+                        )`,
                       },
                     }}
                   >
