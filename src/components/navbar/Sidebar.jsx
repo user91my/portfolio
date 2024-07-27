@@ -54,6 +54,7 @@ const Sidebar = ({
             height="100%"
             zIndex="-1"
             sx={{
+              willChange: "opacity, backdropFilter",
               background: `${hexToRgba(palette.primary[500], 0.5)}`,
               transition: "opacity 0.5s",
               "&.sidebarOpening": { opacity: 0 },
@@ -77,6 +78,7 @@ const Sidebar = ({
             width={isMinWidth700px && isMinHeight850px ? "350px" : "250px"}
             height="100%"
             sx={{
+              willChange: "transform",
               background: `linear-gradient(
                 180deg, 
                 ${hexToRgba(palette.primary[600], "0.7")},
@@ -130,16 +132,17 @@ const Sidebar = ({
                     alignItems="center"
                     height="75px"
                     sx={{
+                      willChange: "transform",
                       "&:hover": {
                         transition: "0.5s ease",
                         transform: "scale(1.1)",
                         cursor: "pointer",
                         color: palette.primary[200],
                         background: `linear-gradient(
-                    180deg,
-                    ${hexToRgba(palette.primary[600], "0.5")},
-                    ${hexToRgba(palette.primary[100], "0.3")}
-                  )`,
+                          180deg,
+                          ${hexToRgba(palette.primary[600], "0.5")},
+                          ${hexToRgba(palette.primary[100], "0.3")}
+                        )`,
                       },
                     }}
                   >
