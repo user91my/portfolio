@@ -58,7 +58,7 @@ const Sidebar = ({
               background: `${hexToRgba(palette.primary[500], 0.5)}`,
               transition: "opacity 0.5s ease",
               "&.sidebarOpening": { opacity: 0 },
-              "&.sidebarOpened": { backdropFilter: "blur(5px)" },
+              //"&.sidebarOpened": { backdropFilter: "blur(5px)" },
               "&.sidebarClosing": { opacity: 0 },
               "&.sidebarClosed": { display: "none" },
             }}
