@@ -54,11 +54,11 @@ const Sidebar = ({
             height="100%"
             zIndex="-1"
             sx={{
-              willChange: "opacity, backdropFilter",
+              willChange: "opacity",
               background: `${hexToRgba(palette.primary[500], 0.5)}`,
               transition: "opacity 0.5s ease",
               "&.sidebarOpening": { opacity: 0 },
-              //"&.sidebarOpened": { backdropFilter: "blur(5px)" },
+              //"&.sidebarOpened": { backdropFilter: "blur(5px)" }, // disabled backdropFilter as it causes mobile browsers to lag when opening sidebar
               "&.sidebarClosing": { opacity: 0 },
               "&.sidebarClosed": { display: "none" },
             }}
@@ -79,6 +79,7 @@ const Sidebar = ({
             height="100%"
             sx={{
               willChange: "transform",
+              overflow: "auto",
               background: `linear-gradient(
                 180deg, 
                 ${hexToRgba(palette.primary[600], "0.7")},

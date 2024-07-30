@@ -18,10 +18,11 @@ const Landing = () => {
   //
   // "useLocation" returns the current location object.
   // The current location object contains properties like :-
-  //    'pathname' - access the current URL's path
+  //    'pathname' - access the current URL's path (e.g. "/")
   //    'search' - access query parameters
-  //    'hash' - access hash fragment
+  //    'hash' - access hash fragment (e.g. "#experience")
   const location = useLocation();
+  console.log(location);
 
   // Controller to scroll to specific hash section within the
   // landing page
