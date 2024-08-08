@@ -6,7 +6,7 @@ export const experienceData = [
     company: "A.L. Tan & Co Chartered Accountants",
     period: "Oct 2017 - Feb 2021",
     description: `Ensuring the compliance of Company Financial Statements with
-        with local and International Accounting Standards`,
+        local and International Accounting Standards`,
     responsibility: (
       <ul style={{ listStyleType: "square" }}>
         <li>
