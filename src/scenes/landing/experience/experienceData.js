@@ -14,7 +14,7 @@ export const experienceData = [
           manufacturing, transport and primary sectors.
         </li>
         <li>
-          Liase with companies over the potential tax implications arising out
+          Liaised with companies over the potential tax implications arising out
           of any significant audit-related adjustments on the Company's
           accounts.
         </li>
