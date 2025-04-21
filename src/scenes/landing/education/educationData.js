@@ -49,7 +49,7 @@ export const educationData = [
       },
       {
         module: "Diploma in Accounting & Business",
-        period: "October 2019 - Dec 2021",
+        period: "Oct 2019 - Dec 2021",
       },
     ],
   },
